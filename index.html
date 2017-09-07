@@ -91,7 +91,7 @@
                             </li>
 
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">기준정보 <b class="caret"></b></a>
+                                <a id="companyInfoTEST" href="#" class="dropdown-toggle" data-toggle="dropdown">기준정보 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a id="companyInfo" href="if_conpanyInfo.html" target="iframe_name">회사정보 관리</a></li>
                                     <li><a id="processClassificationCode" href="if_processClassificationCode.html" target="iframe_name">공정구분코드 관리</a></li>
@@ -103,7 +103,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">거래처정보<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">거래처 관리</a></li>
+                                    <li><a href="processClassificationCode">거래처 관리</a></li>
                                     <li><a href="#">거래처 일괄등록</a></li>
                                     <li><a href="#">거래처 조회</a></li>
                                 </ul>
@@ -112,7 +112,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">견적정보<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">프로젝트 관리</a></li>
+                                    <li><a id="companyInfo" href="if_conpanyInfo.html">프로젝트 관리</a></li>
                                     <li><a href="#">견적 관리</a></li>
                                     <li><a href="#">견적관리(판가적용 요율정보 포함)</a></li>
                                 </ul>
@@ -148,8 +148,7 @@
 
         <div id="overlay">
                                        
-            <iframe id="iframe_id" class="iframe_cls" name="iframe_name" src="if_mainPage.html" 
-                    frameborder="0" scrolling = "no" onload ="resizeIframe(this)">   </iframe> 
+            <iframe id="iframe_id" class="iframe_cls" name="iframe_name" src="if_mainPage.html" frameborder="0" scrolling = "no" onload ="resizeIframe(this)">   </iframe> 
 
             <hr>
 
@@ -208,7 +207,7 @@
         
             $(document).ready(function () {
 
-                //alert('ready function');
+                alert('ready function');
 
                 $(".nav-collapse").on('show.bs.collapse', function () {
                     //alert('show');
@@ -285,6 +284,17 @@
                     document.documentElement.scrollTop = 0;
 
                     alert('scroll to top excute');
+                });
+
+                
+
+                $("#companyInfoTEST").click(function () {
+
+                    alert('companyInfoTEST click');
+
+
+
+                    
                 });
 
 
