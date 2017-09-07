@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>QMS ing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+    
+
+        <link href="css/bootstrap.css?ver=18" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css?ver=18" rel="stylesheet">
+      
+        <style type="text/css">
+            body {
+            padding-top: 67px;
+            padding-bottom: 40px;
+            }
+
+            .bar1, .bar2, .bar3 {
+                width: 23px;
+                height: 3px;
+                background-color: #FFFFFF;
+                margin: 4px 0;
+                transition: 0.4s;
+            }
+
+            .change .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+                transform: rotate(-45deg) translate(-5px, 6px) ;
+            }
+
+            .change .bar2 {opacity: 0;}
+
+            .change .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+                transform: rotate(45deg) translate(-4px, -5px) ;
+            }
+        
+            #company_name, #home {
+
+                font-size: 17px;
+                padding-top: 15px;
+            
+
+            }
+
+            #iframe_id {
+
+                width: 100%;
+
+            }
+         
+        </style>      
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="../assets/js/html5shiv.js"></script>
+        <![endif]-->
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+
+            <div class="navbar-inner">
+
+                <div class="container">
+
+                    <div id="id_btn_navbar" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+
+                    <a class="brand" id="company_name">Please Login</a>
+                    
+                    <div class="nav-collapse collapse">
+
+                        <ul class="nav">
+
+                            <li>
+                                
+                                <a id="home" href="if_mainPage.html" target="iframe_name">HOME</a>
+
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">기준정보 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a id="companyInfo" href="if_conpanyInfo.html" target="iframe_name">회사정보 관리</a></li>
+                                    <li><a id="processClassificationCode" href="if_processClassificationCode.html" target="iframe_name">공정구분코드 관리</a></li>
+                                    <li><a href="#">공정코드 일괄등록</a></li>
+                                    <li><a href="#">공정상세코드 관리</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">거래처정보<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">거래처 관리</a></li>
+                                    <li><a href="#">거래처 일괄등록</a></li>
+                                    <li><a href="#">거래처 조회</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">견적정보<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">프로젝트 관리</a></li>
+                                    <li><a href="#">견적 관리</a></li>
+                                    <li><a href="#">견적관리(판가적용 요율정보 포함)</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">제품정보<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">제품정보 관리</a></li>
+                                    <li><a href="#">제품정보 일괄업로드</a></li>
+                                    <li><a href="#">구매단가 관리</a></li>
+                                    <li><a href="#">구매단가 삭제</a></li>
+                                    <li><a href="#">제품정보 조회</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                        <form class="navbar-form pull-right">
+                            <input class="span2" type="text" placeholder="id">
+                            <input class="span2" type="password" placeholder="Password">
+                            <button type="submit" class="btn">Log in</button>
+                        </form>
+
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container -->
+
+            </div><!--/.navbar-inner -->
+
+        </div><!--/.navbar -->
+
+
+        <div id="overlay">
+                                       
+            <iframe id="iframe_id" class="iframe_cls" name="iframe_name" src="if_mainPage.html" 
+                    frameborder="0" scrolling = "no" onload ="resizeIframe(this)">   </iframe> 
+
+            <hr>
+
+            <footer>
+                <p>&copy; Company 2013</p>
+            </footer>
+
+        </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap-transition.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <script src="js/bootstrap-modal.js"></script>
+        <script src="js/bootstrap-dropdown.js"></script>
+        <script src="js/bootstrap-scrollspy.js"></script>
+        <script src="js/bootstrap-tab.js"></script>
+        <script src="js/bootstrap-tooltip.js"></script>
+        <script src="js/bootstrap-popover.js"></script>
+        <script src="js/bootstrap-button.js"></script>
+        <script src="js/bootstrap-collapse.js"></script>
+        <script src="js/bootstrap-carousel.js"></script>
+        <script src="js/bootstrap-typeahead.js"></script>
+
+        <script>
+
+            window.onload = function () {
+
+                //alert('window.onload');
+
+            }
+
+            function myFunction(x) {
+
+                x.classList.toggle("change");
+
+            }
+
+            function on() {
+                //document.getElementById("overlay").style.opacity = "1";
+                $("#overlay").fadeTo("fast", 1);
+                $("#element_disable").remove();
+
+                //document.getElementById("overlay").style.display = 'block';
+            
+            }
+
+            function off() {
+
+                $("#overlay").fadeTo("fast", 0.3);
+                $("#overlay").append('<div id="element_disable" style="position: fixed;top:0;left:0;width: 100%;height:100%;z-index:2;opacity:0.4;filter: alpha(opacity = 50)"></div>');
+        
+            }
+        
+            $(document).ready(function () {
+
+                //alert('ready function');
+
+                $(".nav-collapse").on('show.bs.collapse', function () {
+                    //alert('show');
+                    off();
+
+                });
+
+                $(".nav-collapse").on('hide.bs.collapse', function () {
+                    //alert('hide');
+                    on();
+                });
+
+                /////////////////////////////////////////////
+
+                $("#home").click(function () {
+
+                    /* collpse hide funtion */
+                    $(".nav-collapse").collapse('hide');
+
+                    /* button animation */
+                    myFunction(document.getElementById("id_btn_navbar"));
+
+                    /* scroll to top */
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                });
+
+
+                $("#companyInfo").click(function () {
+
+                    /* collpse hide funtion */
+                    $(".nav-collapse").collapse('hide');
+
+                    /* button animation */
+                    myFunction(document.getElementById("id_btn_navbar"));
+
+                    /* scroll to top */
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                });
+
+                $("#processClassificationCode").click(function () {
+
+                    /* collpse hide funtion */
+                    $(".nav-collapse").collapse('hide');
+
+                    /* button animation */
+                    myFunction(document.getElementById("id_btn_navbar"));
+
+                    /* scroll to top */
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                });
+
+
+
+                ////////////////////////////////////////////
+
+                /*
+                $(".btn-success").click(function () {
+                    $(".collapse").collapse('show');
+                });
+
+                $(".btn-warning").click(function () {
+                    $(".collapse").collapse('hide');
+                });
+                */
+           
+                /*
+                $(".nav-collapse").on('shown.bs.collapse', function () {
+                    //alert('shown');
+                });
+                */
+
+                /*
+                $(".nav-collapse").on('hidden.bs.collapse', function () {
+                    //alert('hidden');
+                });
+                */
+
+            });
+        
+            function resizeIframe(obj) {
+
+                obj.style.height = (obj.contentWindow.document.body.scrollHeight + 20) + 'px';
+
+            }
+
+        </script>
+
+    </body>
+
+</html>
